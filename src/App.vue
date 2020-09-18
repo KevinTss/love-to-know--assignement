@@ -2,31 +2,27 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    {{ key }}
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import MovieAPI from "./services/api";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
   },
-  computed: {
-    key() {
-      return process.env.VUE_APP_OPEN_MOVIE_API_KEY;
-    },
-  },
-  created() {
-    console.log(process.env);
+  async created() {
+    const a = await MovieAPI.searchByTitle("shrek");
+    console.log("a", a);
   },
 };
 </script>
 
 <style lang="scss">
-$base-color: #c6538c;
+$base-color: white;
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
