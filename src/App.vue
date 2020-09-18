@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    {{ key }}
   </div>
 </template>
 
@@ -12,6 +13,14 @@ export default {
   name: "App",
   components: {
     HelloWorld,
+  },
+  computed: {
+    key() {
+      return process.env.VUE_APP_OPEN_MOVIE_API_KEY;
+    },
+  },
+  created() {
+    console.log(process.env);
   },
 };
 </script>
