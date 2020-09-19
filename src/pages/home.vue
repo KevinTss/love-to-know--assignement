@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import Heading from "../components/ui/heading";
+import Heading from '../components/ui/heading'
 
 export default {
-  name: "home-page",
+  name: 'home-page',
   components: {
     Heading,
   },
-};
+}
 </script>

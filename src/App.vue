@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import MovieAPI from "./services/api";
+import MovieAPI from './services/api'
 
 export default {
-  name: "App",
+  name: 'app',
   async created() {
-    const a = await MovieAPI.searchByTitle("shrek");
-    console.log("a", a);
+    const a = await MovieAPI.searchByTitle('shrek')
+    console.log('a', a)
   },
-};
+}
 </script>
 
 <style lang="scss">

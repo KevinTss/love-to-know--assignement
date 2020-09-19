@@ -1,12 +1,12 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-import HomePage from "./pages/home.vue";
+import HomePage from './pages/home.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
-const routes = [{ path: "/", name: "home", component: HomePage }];
+const routes = [{ path: '/', name: 'home', component: HomePage }]
 
-const router = new VueRouter({ mode: "history", routes });
+const router = new VueRouter({ mode: 'history', routes })
 
-export default router;
+export default router
