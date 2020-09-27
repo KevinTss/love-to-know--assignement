@@ -1,0 +1,19 @@
+@mixin a11y-focus-state {
+  &::after {
+    content: '';
+    position: absolute;
+    border: 2px solid black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 26px;
+    z-index: 10;
+  }
+}
+
+@mixin on-mobile {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}

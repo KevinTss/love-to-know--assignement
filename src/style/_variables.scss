@@ -1,0 +1,8 @@
+$info-color: #d1ecf1;
+$danger-color: #f8d7d9;
+$btn-color: #ea485e;
+$font-color: #1d254f;
+
+$breakpoint-mobile: '768px';
+
+$media-query-mobile-and-down: 'only screen and (max-width: #{$breakpoint-mobile})'
