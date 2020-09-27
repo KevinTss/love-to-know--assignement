@@ -11,9 +11,21 @@ class MovieAPI {
   static searchByTitle(searchQuery) {
     return axios({
       method: 'get',
-      url: `${this.baseUrl}&t=${searchQuery}`,
+      url: `${this.baseUrl}&s=${searchQuery}`,
       headers: this.headers,
     })
+  }
+
+  static getMoviesByIDs(ids) {
+    return Promise.all(
+      ids.map((id) =>
+        axios({
+          method: 'get',
+          url: `${this.baseUrl}&i=${id}`,
+          headers: this.headers,
+        })
+      )
+    )
   }
 }
 

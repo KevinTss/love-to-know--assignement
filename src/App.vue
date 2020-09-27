@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view :movies-id="resultsMovies" @movies="onMoviesFetched" />
   </div>
 </template>
 
@@ -9,24 +9,35 @@ import MovieAPI from './services/api'
 
 export default {
   name: 'app',
-  async created() {
-    const a = await MovieAPI.searchByTitle('shrek')
-    console.log('a', a)
+  data() {
+    return {
+      resultsMovies: [],
+    }
+  },
+  methods: {
+    onMoviesFetched(moviesID) {
+      this.resultsMovies = [...moviesID]
+    },
   },
 }
 </script>
 
 <style lang="scss">
-$base-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-top: 60px;
-}
-body {
-  background-color: $base-color;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
