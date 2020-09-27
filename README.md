@@ -32,17 +32,12 @@ I would like to thank you to take the time to review it. I'm sorry that I wasn't
 
 You can see the live demo [here](https://kevintss.github.io/love-to-know--assignement/) <-- NOT WORKING
 
-## Project setup
+## Run the project
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Serve the local environnement
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
 ```
